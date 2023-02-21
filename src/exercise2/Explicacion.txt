@@ -1,0 +1,4 @@
+
+El punto de entrada a un programa se determina con el método main, sin embargo es posible tener un programa que 
+contenga más de una clase con un método main en cuyo caso se debe definir cual de las clases contiene el método
+main principal para hacer la ejecución desde allí. Este método main de preferencia debe abarcar todo el programa.
