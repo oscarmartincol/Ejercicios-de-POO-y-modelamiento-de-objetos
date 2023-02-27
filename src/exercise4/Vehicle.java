@@ -1,5 +1,6 @@
 package exercise4;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Vehicle {
@@ -8,6 +9,7 @@ public class Vehicle {
     private int wheelsNumber;
     private Date registrationDate;
     private String scrollMeans;
+    private String vehicleType;
 
     public Vehicle(){
 
@@ -61,13 +63,22 @@ public class Vehicle {
         this.scrollMeans = scrollMeans;
     }
 
+    public String getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(String vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
     @Override
     public String toString() {
+        SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         return "Vehicle{" +
                 "passengersNumber=" + passengersNumber +
                 ", crewPresence=" + crewPresence +
                 ", wheelsNumber=" + wheelsNumber +
-                ", registrationDate=" + registrationDate +
+                ", registrationDate=" + format.format(registrationDate) +
                 ", scrollMeans='" + scrollMeans + '\'' +
                 '}';
     }
