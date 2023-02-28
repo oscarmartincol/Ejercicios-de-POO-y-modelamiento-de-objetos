@@ -27,6 +27,13 @@ public abstract class PlanetarySystem {
 
     public PlanetarySystem(){}
 
+    /**
+     * Constructor que crea la instancia de un planeta
+     * @param id identificación
+     * @param name nombre
+     * @param diameter diametro
+     * @param sunDistance distancia al sol
+     */
     public PlanetarySystem(int id, String name, double diameter, double sunDistance) {
         this.id = id;
         this.name = name;
@@ -84,6 +91,10 @@ public abstract class PlanetarySystem {
 
     public abstract double gravitationalAttraction();
 
+    /**
+     * Método para acceder a los datos del sistema planetario
+     * @return Datos del sistema planetario
+     */
     @Override
     public String toString() {
         return "PlanetarySystem{" +

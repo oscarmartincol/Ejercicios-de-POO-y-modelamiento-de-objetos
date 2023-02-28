@@ -4,8 +4,17 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
+/**
+ * Clase que representa los métodos para solicitar y mostrar los datos  de un vehículo
+ * @author Oscar David Martinez Benavides
+ */
 public class ArrayMethods {
 
+    /**
+     * Método que solicita los datos del vehículo.
+     * @return Vehículo creado.
+     * @throws ParseException Excepción cuando se ingresa un formato incorrecto para la fecha.
+     */
     public Vehicle addVehicles() throws ParseException {
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         Scanner input = new Scanner(System.in);
@@ -24,6 +33,10 @@ public class ArrayMethods {
             return vehicle;
     }
 
+    /**
+     * Método para imprimir los datos de los vehículos de un arreglo.
+     * @param vehicles Arreglo con los vehículos almacenados.
+     */
     public void showVehicles(Vehicle[] vehicles) {
         for(Vehicle vehicle: vehicles) {
             if(vehicle != null) {

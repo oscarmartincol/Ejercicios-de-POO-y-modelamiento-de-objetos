@@ -4,8 +4,19 @@ import exercise4.Vehicle;
 
 import java.text.SimpleDateFormat;
 
+/**
+ * Clase que representa una motocicleta
+ * @author Oscar David Martinez Benavides
+ */
 public class Motorcycle extends Vehicle {
+    /**
+     * Variable que describe si tiene embrague de manubrio.
+     */
     private boolean handlebarClutch;
+
+    /**
+     * Constructor que define el tipo de vehículo como Motocicleta y handlebarClutch como true
+     */
     public Motorcycle(){
         setVehicleType("Motocicleta");
         this.handlebarClutch = true;
@@ -19,6 +30,10 @@ public class Motorcycle extends Vehicle {
         this.handlebarClutch = handlebarClutch;
     }
 
+    /**
+     * Método para acceder a la información del vehículo.
+     * @return Atributos y valores del vehículo
+     */
     public String toString() {
         SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy");
         return "Motocicleta{" +

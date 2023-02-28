@@ -4,20 +4,30 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * Clase con el método main
+ * @author Oscar David Martinez Benavides
+ */
 public class Main {
     public static void main(String[] args) {
+        /*
+          Lista donde se guardan planetas del sistema solar
+         */
         List<PlanetarySystem> planets = createPlanets();
         Scanner input = new Scanner(System.in);
         int id1, id2;
         System.out.println("Calculadora de la atracción gravitatoria entre dos planetas");
+        //imprimir lista de planetas con su id
         for(PlanetarySystem planet: planets){
             System.out.println("id= " + planet.getId() + " Planeta: " + planet.getName());
         }
+        //seleccionar los planetas para calcular su atracción gravitatoria
         System.out.print("Ingrese el id del primer planeta: ");
         id1 = input.nextInt();
         System.out.print("Ingrese el id del segundo planeta: ");
         id2 = input.nextInt();
 
+        // Calcular la atracción gravitatoria entre los planetas
         PlanetarySystem gravitationalAtraction = new GravitationalAttractionBetweenPlanets((Planet) planets.get(id1 - 1), (Planet) planets.get(id2 - 1));
         System.out.println("Datos de los planetas:");
         System.out.println(planets.get(id1 - 1));
@@ -31,6 +41,10 @@ public class Main {
                 + " y " + planets.get(id2 - 1).getName() +": " + gravitationalAtraction.gravitationalAttraction());
     }
 
+    /**
+     * Método para llenar la lista con planetas del sistema solar
+     * @return Lista de planetas
+     */
     public static List<PlanetarySystem> createPlanets(){
         List<PlanetarySystem> planets = new ArrayList<>();
         Planet planet1 = new Planet(1,"Mercurio",4879.4,46000000);
